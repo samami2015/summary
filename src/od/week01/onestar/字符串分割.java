@@ -1,4 +1,4 @@
-package od.week01;
+package od.week01.onestar;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -29,15 +29,12 @@ public class 字符串分割 {
             while (scanner.hasNext()) {
                 int n = Integer.parseInt(scanner.nextLine());
                 String line = scanner.nextLine();
-
                 int index = line.indexOf('-');
                 String first = line.substring(0, index);
                 String rest = line.substring(index + 1).replace("-", "");
-
                 StringBuilder builder = new StringBuilder(first);
                 char[] arr = rest.toCharArray();
-                int start = 0, end = n > args.length ? args.length : n;
-
+                int start = 0, end = n > arr.length ? arr.length : n;
                 while (start < arr.length) {
                     char[] data = Arrays.copyOfRange(arr, start, end);
                     int bc = 0, mc = 0;

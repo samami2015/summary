@@ -1,4 +1,4 @@
-package od.week01;
+package od.week01.onestar;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -42,7 +42,6 @@ public class 寻找身高相近的小朋友 {
                     list.add(new Data(Math.abs(k - v), k));
                 }
                 Collections.sort(list);
-
                 StringBuilder sb = new StringBuilder();
                 for (Data d : list) {
                     sb.append(d.value).append(" ");

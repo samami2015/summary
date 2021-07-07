@@ -1,4 +1,4 @@
-package od.week01;
+package od.week01.onestar;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -82,23 +82,23 @@ public class 按索引范围翻转文章片段 {
             int c = 0;
             for (int i = 0; i < preWords.size(); i++) {
                 if (c > 0) {
-                    System.out.println(" ");
+                    System.out.print(" ");
                 }
-                System.out.println(preWords.get(i));
+                System.out.print(preWords.get(i));
                 c++;
             }
             for (int i = 0; i < words.size(); i++) {
                 if (c > 0) {
-                    System.out.println(" ");
+                    System.out.print(" ");
                 }
-                System.out.println(words.get(words.size() - i - 1));
+                System.out.print(words.get(words.size() - i - 1));
                 c++;
             }
             for (int i = 0; i < sufixWords.size(); i++) {
                 if (c > 0) {
-                    System.out.println(" ");
+                    System.out.print(" ");
                 }
-                System.out.println(sufixWords.get(i));
+                System.out.print(sufixWords.get(i));
                 c++;
             }
             System.out.println();

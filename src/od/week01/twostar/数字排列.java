@@ -1,4 +1,4 @@
-package od.week01;
+package od.week01.twostar;
 
 import java.util.*;
 
