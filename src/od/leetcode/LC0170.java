@@ -2,7 +2,7 @@ package od.leetcode;
 
 public class LC0170 {
     public static void main(String[] args) {
-        leetcode.TwoSum twoSum = new leetcode.TwoSum();
+        TwoSum twoSum = new TwoSum();
         twoSum.add(1);   // [] --> [1]
         twoSum.add(3);   // [1] --> [1,3]
         twoSum.add(5);   // [1,3] --> [1,3,5]
