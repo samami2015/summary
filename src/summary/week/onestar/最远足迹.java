@@ -54,12 +54,11 @@ public class 最远足迹 {
                 }
             }
         }
-        if(maxPoint==-1){
+        if (maxPoint == -1) {
             System.out.println("0,0");
-        }else {
-            System.out.println(String.format("(%s)",points.get(maxPoint)));
+        } else {
+            System.out.println(String.format("(%s)", points.get(maxPoint)));
         }
-
     }
 
     private static void getPoints(List<String> points, String coordinateStr) {

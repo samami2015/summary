@@ -76,26 +76,26 @@ public class 可以组成网络的服务器 {
                     }
                 }
             }
-                    Map<Integer, Node> nodeMap = nodes.stream().collect(Collectors.toMap(node -> node.id, node -> node));
-                    for (Node node : nodes) {
-                        if (node.parentId == 0) {
-                            node.parentId = node.id;
-                        }
-                        if (adj.get(node.id) == null) {
-                            continue;
-                        }
-                        for (Integer next : adj.get(node.id)) {
-                            Node cur = nodeMap.get(next);
-                            if (cur.parentId == 0) {
-                                cur.parentId = node.parentId;
-                            } else if (cur.parentId != node.parentId) {
-                                nodes.stream().filter(ns -> ns.parentId == cur.parentId).forEach(ns -> ns.parentId = node.parentId);
-                            }
-                        }
+            Map<Integer, Node> nodeMap = nodes.stream().collect(Collectors.toMap(node -> node.id, node -> node));
+            for (Node node : nodes) {
+                if (node.parentId == 0) {
+                    node.parentId = node.id;
+                }
+                if (adj.get(node.id) == null) {
+                    continue;
+                }
+                for (Integer next : adj.get(node.id)) {
+                    Node cur = nodeMap.get(next);
+                    if (cur.parentId == 0) {
+                        cur.parentId = node.parentId;
+                    } else if (cur.parentId != node.parentId) {
+                        nodes.stream().filter(ns -> ns.parentId == cur.parentId).forEach(ns -> ns.parentId = node.parentId);
                     }
-                    Map<Integer, List<Node>> parentMap = nodes.stream().collect(Collectors.groupingBy(node -> node.parentId));
-                    Optional<Integer> max = parentMap.values().stream().map(values -> values.size()).max(Integer::compareTo);
-                    System.out.println(max.get());
+                }
+            }
+            Map<Integer, List<Node>> parentMap = nodes.stream().collect(Collectors.groupingBy(node -> node.parentId));
+            Optional<Integer> max = parentMap.values().stream().map(values -> values.size()).max(Integer::compareTo);
+            System.out.println(max.get());
         }
     }
 }

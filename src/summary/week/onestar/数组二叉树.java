@@ -49,13 +49,13 @@ public class 数组二叉树 {
             List<Integer> list = new ArrayList<>();
             while (true) {
                 list.add(tree[minIndex]);
-                minIndex = minIndex/2;
-                if(minIndex==0){
+                minIndex = minIndex / 2;
+                if (minIndex == 0) {
                     break;
                 }
             }
             Collections.reverse(list);
-            System.out.println(String.join(" ",list.stream().map(String::valueOf).collect(Collectors.toList())));
+            System.out.println(list.stream().map(String::valueOf).collect(Collectors.joining(" ")));
         }
     }
 }
