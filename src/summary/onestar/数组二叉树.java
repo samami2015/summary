@@ -1,4 +1,4 @@
-package summary.week.onestar;
+package summary.onestar;
 
 import java.util.ArrayList;
 import java.util.Collections;
