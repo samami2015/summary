@@ -1,4 +1,4 @@
-package summary.plus.twostar;
+package summary.week.twostar;
 
 import java.util.*;
 import java.util.stream.Collectors;
