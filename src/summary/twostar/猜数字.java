@@ -1,4 +1,4 @@
-package summary.week.onestar;
+package summary.twostar;
 
 import java.util.LinkedList;
 import java.util.List;

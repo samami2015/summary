@@ -1,4 +1,4 @@
-package summary.week.twostar;
+package summary.twostar;
 
 import java.util.*;
 

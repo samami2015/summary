@@ -1,4 +1,4 @@
-package summary.week.onestar;
+package summary.twostar;
 
 import java.util.ArrayList;
 import java.util.Scanner;
