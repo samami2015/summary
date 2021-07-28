@@ -1,6 +1,7 @@
 package summary.twostar;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 /**
@@ -43,6 +44,7 @@ public class 数组拼接 {
     private static void vers(int n, int m, ArrayList<String> sc) {
         String back = "";
         while (!empty(sc)) {
+//        while (!sc.isEmpty()) {
             for (int i = 0; i < sc.size(); i++) {
                 String stringTemp = sc.get(i);
                 if (stringTemp == null) {
